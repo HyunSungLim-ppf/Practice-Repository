@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API TEST</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- jQuery를 이용한 ajax 사용 -->
+    <script>
+        $(() => {
+
+            $.ajax({
+                type: "GET",	
+                url: "https://api.jikan.moe/v4/anime/10000",	
+                data: {},			
+                success: function (response) {	
+                    console.log(response)			
+                    $('body').append("<img src="+response.data.images.jpg.image_url+" alt=''><br>")	
+                    $('body').append("<h2>"+response.data.title_japanese+"</h2>")
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <h2>API 테스트임ㅋㅋ jQuery ajax를 이용해서 data를 가져왔음ㅋㅋ</h2>
+</body>
+
+</html>

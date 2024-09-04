@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API TEST</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- jQuery를 이용한 ajax 사용 -->
+    <script>
+        $(() => {
+
+            $.ajax({
+                type: "GET",	
+                url: "http://www.kobis.or.kr/kobisopenapi/webservice/soap/boxoffice/1",	
+                data: {},			
+                success: function (response) {	
+                    // $('body').append(response)			
+                    console.log(response)
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <h2>API 테스트임ㅋㅋ jQuery ajax를 이용해서 data를 가져왔음ㅋㅋ</h2>
+    <div id="document">123</div>
+</body>
+
+</html>
